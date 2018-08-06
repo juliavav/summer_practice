@@ -1,0 +1,15 @@
+{% extends "main_page/wrapper.html" %}
+
+{% block content %}
+    {% for cat in cats_list %}
+        <div class="shadow-sm p-3 mb-5 bg-white rounded">
+            <img src="{{ cat.image_url }}"
+                 class="img-fluid rounded">
+            <h2>{{ cat.name }}</h2>
+            <div class="row">
+                <div class="col-md-3"><h3 class="font-weight-light">{{ cat.sex }}</h3></div>
+                <div class="col-md-9"><h3 class="font-weight-light">{{ cat.age }}</h3></div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
